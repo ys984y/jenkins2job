@@ -3,16 +3,16 @@ pipeline {
 
      parameters {
 
-    choiceParam('environment', ['QA'],
+    choice('environment', ['QA'],
     'Which environment to apply testing to')
 
-    choiceParam('browser', ['chrome'],
+    choice('browser', ['chrome'],
     'Browser to run tests on')
 
-    choiceParam('config_file', ['CucumberConfig/nightwatch.conf.js'],
+    choice('config_file', ['CucumberConfig/nightwatch.conf.js'],
     'configuriation file to use for nightwatch')
 
-    choiceParam('test_tag', ['logindetails','IITSmoke'],
+    choice('test_tag', ['logindetails','IITSmoke'],
     'Test Tag that applies to which test or suite of test to run')
     
   }
